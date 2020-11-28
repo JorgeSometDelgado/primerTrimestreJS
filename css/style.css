@@ -1,0 +1,195 @@
+/*----------INDEX--------------*/
+
+.fondoPrincipal{
+    background-image: url("../img/fondoPrinci.jpg");
+    background-position: center center;
+    /* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-attachment: fixed;
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    background-size: cover;
+}
+
+.tituloFondo{
+    color: white;
+    position: absolute;
+    top: 28%; 
+    right: 50%;
+    transform: translate(50%,-50%);
+    background: rgb(218, 78, 78);
+    font-size: 70px;
+    opacity: 0.9;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 4px;
+}
+
+/*----------HERO SECTION COPIADO--------------*/
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    /*background-color: lightgrey;*/
+}
+
+.hero {
+    /* Sizing */
+    width: 100%;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    color: white;
+    
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../img/fondoPrinci.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+    
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.hero .btn {
+    /* Positioning and sizing */
+    display: block;
+    width: 200px;
+    
+    /* Padding and margins */
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Text styles */
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    
+    /* Border styles */
+    border: 3px solid white;
+    border-radius: 20px;
+    
+    /* Background styles */
+    background-color: rgba(147, 112, 219, 0.8)
+}
+/*-------------------------------------------------------*/
+
+.headerIcono{
+    height: 45px;
+    padding: 6px;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(163, 53, 53);;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .headerIcono{
+    height: 36px;
+    float: right;
+    margin-right: 10px;
+  }
+  /*-------------------------------------------------------*/
+
+
+  .imagen1{
+      border-radius: 50%;
+      width: 300px;
+      float: left;
+      margin-left: 144px;
+  }
+
+  .info1{
+    margin-top: 300px;
+    margin-left: 217px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .info2{
+    margin-top: 16px;
+    margin-left: 167px;
+    font-size: 18px;    
+  }
+
+  .info3{
+    margin-top: 16px;
+    margin-left: 217px;
+    font-size: 18px;    
+  }
+
+  .info4{
+    margin-top: 16px;
+    margin-left: 217px;
+    font-size: 18px;    
+  }
+  /*-------------------------------------------------------*/
+  footer{
+    width: 100%;
+    background-color: black;
+    height: 40px;
+    margin-top: 22px;
+    padding-top: 16px;
+  }
+  /*-------------------------------------------------------*/
+  table{
+    width: 60%;
+  }
+  th{
+    border: 1px solid ;
+  }
+  td, th {
+    /*border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  /*-------------------------------------------------------*/
+  .inputForm{
+    border:none;
+    border-bottom:1px solid black;
+  }
+
+  .contenedorForm{
+    width:20%;
+    border-radius: 10px;
+    text-align: left;
+  }
