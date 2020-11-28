@@ -5,7 +5,8 @@ function controlMenoresEdad() {
         alert("Puesto que eres mayor de edad, puedes entrar en nuestra web. ¡Bienvenido!");
        location.href="productos.html";
     }else{
-        alert("No puedes entrar en nuestra web si eres menor de edad");
+        let mensajeMenores = new MensajeError();
+        mensajeMenores.imprimirMensajeMenores();
     }
 }
 
@@ -69,4 +70,12 @@ function validar() {
         evento.preventDefault();
     }
 }
+
+//POO con JS
+function MensajeError() {
+    this.imprimirMensajeMenores = function () {
+        alert("No puedes entrar en nuestra web si eres menor de edad");
+    }
+}
+
     
