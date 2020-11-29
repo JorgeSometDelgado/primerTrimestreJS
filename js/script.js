@@ -45,7 +45,7 @@ function validar() {
         todo_correcto = false;
         alert("El nombre no puede estar vacío");
     }
-   
+   /*
     //Validación e-mail:
     var expresionEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var email=document.getElementById("email").value;
@@ -65,6 +65,7 @@ function validar() {
         document.getElementById("fecha").focus();
         document.getElementById("fecha").classList.add("error");
     }
+    */
     //Comprobación de que no hay ningín campo con errores para enviar el formulario:
     if(!todo_correcto){
         evento.preventDefault();
