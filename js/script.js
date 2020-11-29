@@ -40,11 +40,18 @@ function iniciar() {
 function validar() {
     alert("ok");
     var todo_correcto = true;
+    var nombre="";
+    var controlaNombre;
     //Validación nombre:
     if (document.getElementById("nombre").value == "") {
         todo_correcto = false;
         alert("El nombre no puede estar vacío");
     }
+
+   nombre= document.getElementById("nombre").value;
+   controlaNombre=nombre.split(" ");
+   alert(controlaNombre.length);
+   
    /*
     //Validación e-mail:
     var expresionEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
