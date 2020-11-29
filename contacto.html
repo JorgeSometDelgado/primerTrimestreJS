@@ -21,7 +21,7 @@
     <center>
         <fieldset class="contenedorForm">
             <legend style="background-color: red; border-radius: 5px;">Ponte en contacto con nosotros:</legend>
-            <form name="formulario" id="formulario" onsubmit="validar()">
+            <form name="formulario" id="formulario">
                 <label for="nombre">Nombre completo:</label>
                 <input type="text" name="nombre" id="nombre" class="inputForm" />
                 <br><br>
@@ -32,8 +32,8 @@
                 <input name="fecha" type="text" id="fecha" class="inputForm" />
                 <br><br>
                 <label for="mensaje">Mensaje:</label><br>
-                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí"></textarea>
-                <input type="submit" name="enviar" id="enviar" value="Enviar" />
+                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" onblur="mensajeRespeto()"></textarea>
+                <input type="submit" id="fecha" name="enviar" id="enviar" value="Enviar" onclick="confirmaContacto()"/>
             </form>
         </fieldset>
     </center>

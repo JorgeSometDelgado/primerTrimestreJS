@@ -1,3 +1,4 @@
+/////////////////////////////////////CONTROL MENORES DE EDAD//////////////////////////////////////////
 function controlMenoresEdad() {
     let edad=0;
     edad=prompt("Cuantos años tienes");
@@ -9,7 +10,7 @@ function controlMenoresEdad() {
         mensajeMenores.imprimirMensajeMenores();
     }
 }
-
+/////////////////////////////////////CARRITO DE ENCARGOS//////////////////////////////////////////
 function compra() {
     let producto="";
     let carrito= new Array();
@@ -32,17 +33,19 @@ function compra() {
     document.getElementById("escribeEncargo").innerHTML="Su pedido de ("+carrito+") ha sido registrado en la fecha "+fecha.getDate() + "/" + (fecha.getMonth() +1) + "/" + fecha.getFullYear()+", pede venir a recogerlo cuando quiera";
 }
 
+/////////////////////////////////////VALIDACIÓN FORMULARIO//////////////////////////////////////////
+
 window.onload = iniciar;
 function iniciar() {
     document.getElementById("formulario").addEventListener('submit', validar, false);
 }
 
-function validar() {
-    alert("ok");
+function validar(evento) {
     var todo_correcto = true;
+    
+    //Validación nombre:
     var nombre="";
     var controlaNombre;
-    //Validación nombre:
     if (document.getElementById("nombre").value == "") {
         todo_correcto = false;
         alert("El nombre no puede estar vacío");
@@ -50,36 +53,57 @@ function validar() {
 
    nombre= document.getElementById("nombre").value;
    controlaNombre=nombre.split(" ");
-   alert(controlaNombre.length);
+   if(controlaNombre.length<=1){
+    todo_correcto = false;
+       alert("Debe introducir al menos uno de sus apellidos");
+   }
    
-   /*
+   
     //Validación e-mail:
     var expresionEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var email=document.getElementById("email").value;
     if (!expresionEmail.test(email)) {
         todo_correcto=false;
-        alert("ERROR: El email no tiene el formato correcto");
-        document.getElementById("errores").innerHTML = "ERROR: El email no tiene el formato correcto";
-        document.getElementById("email").focus();
-        document.getElementById("email").classList.add("error");
+        alert("El email no tiene el formato correcto");
+    }
+    if (document.getElementById("email").value == "") {
+        todo_correcto = false;
+        alert("El email no puede estar vacío");
     }
     //Validación fecha de nacimiento:
-    var expresionFecNac= /^(?:3[01]|[12][0-9]|0?[1-9])([/-])(0?[1-9]|1[1-2])\1\d{4}$/;//Está dividida en 3 partes separadas por [/-] tal y como indicaba el ejercicio.
+    var expresionFecNac= /^(?:3[01]|[12][0-9]|0?[1-9])([/-])(0?[1-9]|1[1-2])\1\d{4}$/;
     var fecNac=document.getElementById("fecha").value;
     if (!expresionFecNac.test(fecNac)) {
         todo_correcto=false;
-        document.getElementById("errores").innerHTML = "ERROR: El formato de la fecha no es correcto";
-        document.getElementById("fecha").focus();
-        document.getElementById("fecha").classList.add("error");
+        alert("El formato de la fecha de nacimiento no es correcto(dd/mm/aaa)");
     }
-    */
+    if (document.getElementById("fecha").value == "") {
+        todo_correcto = false;
+        alert("El nombre no puede estar vacío");
+    }
+    
+    //Validación mensaje:
+    if (document.getElementById("mensaje").value == "") {
+        todo_correcto = false;
+        alert("El mensaje no puede estar vacío");
+    }
+
     //Comprobación de que no hay ningín campo con errores para enviar el formulario:
     if(!todo_correcto){
         evento.preventDefault();
     }
+    
 }
 
-//POO con JS
+function confirmaContacto() {
+    confirm("¿Estás seguro de que quieres enviar este mensaje?");
+}
+
+function mensajeRespeto() {
+    alert("Por favor, escribe tu mensaje de manera respetuosa y te contestaremos lo antes posible");
+}
+
+/////////////////////////////////////POO con JS//////////////////////////////////////////
 function MensajeError() {
     this.imprimirMensajeMenores = function () {
         alert("No puedes entrar en nuestra web si eres menor de edad");
