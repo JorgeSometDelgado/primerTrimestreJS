@@ -48,38 +48,44 @@ function validar(evento) {
     if (document.getElementById("nombre").value == "") {
         todo_correcto = false;
         alert("El nombre no puede estar vacío");
-    }
-
-   nombre= document.getElementById("nombre").value;
-   controlaNombre=nombre.split(" ");
-   if(controlaNombre.length<=1){
+    }else{
+        controlaNombre=nombre.split(" ");
+    if(controlaNombre.length<=1){
     todo_correcto = false;
        alert("Debe introducir al menos uno de sus apellidos");
    }
-   
+    }
+      
    
     //Validación e-mail:
     var expresionEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var email=document.getElementById("email").value;
-    if (!expresionEmail.test(email)) {
-        todo_correcto=false;
-        alert("El email no tiene el formato correcto");
-    }
-    if (document.getElementById("email").value == "") {
-        todo_correcto = false;
-        alert("El email no puede estar vacío");
-    }
+    
+        if (document.getElementById("email").value == "") {
+            todo_correcto = false;
+            alert("El email no puede estar vacío");
+        }else{
+            if (!expresionEmail.test(email)) {
+                todo_correcto=false;
+                alert("El email no tiene el formato correcto");
+            }
+            
+        }
+    
     //Validación fecha de nacimiento:
     var expresionFecNac= /^(?:3[01]|[12][0-9]|0?[1-9])([/-])(0?[1-9]|1[1-2])\1\d{4}$/;
     var fecNac=document.getElementById("fecha").value;
-    if (!expresionFecNac.test(fecNac)) {
-        todo_correcto=false;
-        alert("El formato de la fecha de nacimiento no es correcto(dd/mm/aaa)");
-    }
-    if (document.getElementById("fecha").value == "") {
-        todo_correcto = false;
-        alert("El nombre no puede estar vacío");
-    }
+
+        if (document.getElementById("fecha").value == "") {
+            todo_correcto = false;
+            alert("La fecha de nacimiento no puede estar vacía");
+        }else{
+            if (!expresionFecNac.test(fecNac)) {
+                todo_correcto=false;
+                alert("El formato de la fecha de nacimiento no es correcto(dd/mm/aaa)");
+            }
+        }
+    
     
     //Validación mensaje:
     if (document.getElementById("mensaje").value == "") {
