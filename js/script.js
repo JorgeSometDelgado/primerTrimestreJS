@@ -1,9 +1,8 @@
 /////////////////////////////////////CONTROL MENORES DE EDAD//////////////////////////////////////////
 function controlMenoresEdad() {
     let edad=0;
-    edad=prompt("Cuantos años tienes");
+    edad=prompt("Introduce tu edad");
     if (edad>=18) {
-        alert("Puesto que eres mayor de edad, puedes entrar en nuestra web. ¡Bienvenido!");
        location.href="productos.html";
     }else{
         let mensajeMenores = new MensajeError();
@@ -106,7 +105,7 @@ function mensajeRespeto() {
 /////////////////////////////////////POO con JS//////////////////////////////////////////
 function MensajeError() {
     this.imprimirMensajeMenores = function () {
-        alert("No puedes entrar en nuestra web si eres menor de edad");
+        alert("No puedes visitar nuestros productos si eres menor de edad");
     }
 }
 

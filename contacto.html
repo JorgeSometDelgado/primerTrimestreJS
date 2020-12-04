@@ -13,27 +13,30 @@
     <header class="topnav">
         <img src="img/logo.png" alt="" class="headerIcono">
         <a href="index.html">Inicio</a>
-          <a href="productos.html" onclick="controlMenoresEdad()">Productos</a>
+          <a onclick="controlMenoresEdad()">Productos</a>
           <a href="galeria.html">Galería</a>
           <a href="contacto.html">Contacto</a>
     </header>
-    <br><br>
-    <center>
-        <fieldset class="contenedorForm">
-            <legend style="background-color: red; border-radius: 5px;">Ponte en contacto con nosotros:</legend>
+    <br><br><br><br><br><br>
+    <center class="formularioDistancia">
+        <fieldset class="contenedorForm" >
+            <legend style="background-color: rgb(163, 53, 53); border-radius: 5px; padding: 6px; color:white; font-size: 18px;">Escríbemos:</legend>
             <form name="formulario" id="formulario">
+                <br>
                 <label for="nombre">Nombre completo:</label>
                 <input type="text" name="nombre" id="nombre" class="inputForm" />
                 <br><br>
                 <label for="email">E-mail:</label>
-                <input name="email" type="text" id="email" class="inputForm" />
+                <input style="width: 220px;" name="email" type="text" id="email" class="inputForm" />
                 <br><br>
                 <label for="fecha">Fecha Nacimiento:</label>
                 <input name="fecha" type="text" id="fecha" class="inputForm" />
                 <br><br>
                 <label for="mensaje">Mensaje:</label><br>
-                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" onblur="mensajeRespeto()"></textarea>
-                <input type="submit" id="fecha" name="enviar" id="enviar" value="Enviar" onclick="confirmaContacto()"/>
+                <textarea style="width: 280px; height: 100px;" name="mensaje" placeholder="Escribe tu mensaje aquí" onblur="mensajeRespeto()"></textarea>
+                <br><br>
+                <center><input style="width: 120px; height: 25px; border-radius: 5px;" type="submit" id="fecha" name="enviar" id="enviar" value="Enviar" onclick="confirmaContacto()"/></center>
+                
             </form>
         </fieldset>
     </center>
